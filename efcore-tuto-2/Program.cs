@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿﻿﻿using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +11,6 @@ namespace efcore_tuto_1 {
 
                 // Migrate the database
                 context.Database.Migrate();
-                context.SaveChanges();
 
 				// Verify that all previous data is kept
 				Console.WriteLine("Current database content");
