@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
@@ -31,7 +31,7 @@ namespace efcore_tuto_1 {
                 // Fetch all video games
                 Console.WriteLine ("Current database content");
                 foreach (var videoGame in context.VideoGames.ToList ()) {
-                    Console.WriteLine ($"{videoGame.Title} - {videoGame.Platform}");
+                    Console.WriteLine ($"{videoGame.Title} - {videoGame.Platform} - {videoGame.ReleaseYear}");
                 }
             }
         }
