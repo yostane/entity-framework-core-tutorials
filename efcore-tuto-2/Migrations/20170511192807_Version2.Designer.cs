@@ -8,9 +8,10 @@ using efcore_tuto_1;
 namespace efcoretuto2.Migrations
 {
     [DbContext(typeof(VideoGamesDatabaseContext))]
-    partial class VideoGamesDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20170511192807_Version2")]
+    partial class Version2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2");
