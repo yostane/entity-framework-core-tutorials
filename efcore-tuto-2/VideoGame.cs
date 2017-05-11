@@ -8,7 +8,5 @@ namespace efcore_tuto_1 {
         public string Title { get; set; }
 
         public string Platform { get; set; }
-
-        public int ReleaseYear { get; set; }
     }
 }

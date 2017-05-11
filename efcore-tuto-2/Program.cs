@@ -1,5 +1,6 @@
-﻿using System;
+﻿﻿using System;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace efcore_tuto_1 {
     class Program {
@@ -11,8 +12,8 @@ namespace efcore_tuto_1 {
                 //The line below clears and resets the databse.
                 context.Database.EnsureDeleted();
 
-                // Create the database if it does not exist
-                context.Database.EnsureCreated ();
+                // Create the database if it does not exist and handles migrations
+                context.Database.Migrate();
 
                 // Add some video games. 
                 //Note that the Id field is autoincremented by default
@@ -25,6 +26,7 @@ namespace efcore_tuto_1 {
                 SG.Platform = "PSVita";
                 context.VideoGames.Add (SG);
                 //Commit changes by calling save changes
+
                 context.SaveChanges ();
 
                 // Fetch all video games
