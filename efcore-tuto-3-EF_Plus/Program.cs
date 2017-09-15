@@ -105,7 +105,7 @@ namespace efcore_tuto_1
             {
                 start = DateTime.Now;
                 var res = context.VideoGames.Where(vg => predicate(vg)).Delete(x => x.BatchSize = 500);
-                context.SaveChanges();
+                //no need to save context
                 duration = DateTime.Now - start;
             }
             
